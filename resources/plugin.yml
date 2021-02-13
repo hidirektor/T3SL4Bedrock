@@ -1,0 +1,10 @@
+name: T3SL4Bedrock
+version: 12.02.2021
+author: SYN_T3SL4
+main: me.t3sl4.bedrock.T3SL4Bedrock
+depend: [ProtocolLib]
+
+commands:
+  trock:
+    description: Main command of T3SL4Bedrock
+    aliases: [t3sl4bedrock]

@@ -1,0 +1,43 @@
+Prefix: '&6&lT3SL4Bedrock &8» '
+Settings:
+  time: 200
+  enabled-worlds:
+    enable: true
+    list:
+      - 'world'
+      - 'Orman'
+Item:
+  enable: true
+  HideEnchant: true
+  name: '&6Bedrock Kırıcı'
+  lore:
+    - '&r   '
+    - '&eBu Kazma Sayesinde,'
+    - '&eKatman Kayalarını Çok Rahat'
+    - '&eBir Şekilde Kırabilirsin !'
+    - '&r     '
+  materials:
+    - DIAMOND_PICKAXE
+    - IRON_PICKAXE
+Info:
+  - '&8&l&m-&f&l&m-&8&l&m-&f&l&m-&8&l&m-&f&l&m-&8&l&m[&6 &lT3SL4Bedrock &8&l&m]&f&l&m-&8&l&m-&f&l&m-&8&l&m-&f&l&m-&8&l&m-'
+  - '&a/trock al &b<Adet> &f»&eBelirttiğin Miktarda Özel Kazma Alırsın.'
+  - '&a/trock ver &b<Oyuncu> &c<Adet> &f»&eBelirttiğin Oyuncuya Belirttiğin Miktarda Özel Kazma Verir.'
+  - '&a/trock dagit &c<Adet> &f»&eSunucudaki Tüm Oyunculara Belirttiğin Kadar Özel Kazma Verir'
+  - '&a/trock reload &f»&eEklentiyi Yeniler'
+Messages:
+  DigError: '&eDostum Katman Kayalarını Elindeki Kazmayla Kıramazsın!'
+  PermError: '&eDostum Maalesef Bunun İçin Yetkin Yok.'
+  Console: '&eDostum Bu Komutu Konsoldan Kullanamazsın.'
+  ArgTakeError: '&eKullanımı: &a/trock take &b<Adet>'
+  NumberError: '&eDostum Lütfen Geçerli Bir Sayı Gir.'
+  InventoryFull: '&eDostum Maalesef Envanterin Dolu.'
+  InventoryIsFull: '&c%player% &eAdlı Oyuncunun Envanteri Dolu.'
+  WorldError: '&eDostum Maalesef Bulunduğun Dünyada Katman Kayasını Kıramazsın.'
+  PickaxeSystemError: '&eÖzel Kazma Sistemi Kapalı Olduğu İçin Bu Komutu Kullanamazsın.'
+  PickaxeTaken: '&eEnvanterine &c%adet% &eÖzel Kazma Eklendi.'
+  ArgGiveError: '&eKullanımı: &a/trock al &b<Adet>'
+  PlayerNotFound: '&eBelirttiğin Oyuncu Bulunamadı.'
+  Given: '&c%player% &eAdlı Oyuncuya &c%adet% &eÖzel Kazma Verildi.'
+  ArgDistributeError: '&eKullanımı: &a/trock dagit &c<Adet>'
+  ServerGiven: '&eSunucudaki Herkese &c%adet% &eÖzel Kazma Verildi.'
