@@ -1,13 +1,12 @@
 Prefix: '&6&lT3SL4Bedrock &8» '
 Settings:
-  time: 200
+  time: 150
   enabled-worlds:
-    enable: true
+    enable: false
     list:
-      - 'world'
-      - 'Orman'
+      - ASkyblock
 Item:
-  enable: true
+  enable: false
   HideEnchant: true
   name: '&6Bedrock Kırıcı'
   lore:
@@ -41,3 +40,6 @@ Messages:
   Given: '&c%player% &eAdlı Oyuncuya &c%adet% &eÖzel Kazma Verildi.'
   ArgDistributeError: '&eKullanımı: &a/trock dagit &c<Adet>'
   ServerGiven: '&eSunucudaki Herkese &c%adet% &eÖzel Kazma Verildi.'
+  PickaxeError: '&eDostum Maalesef Katman Kayalarını Özel Kazma İle Kıramazsın.'
+  Reload: '&eEklenti Başarılı Bir Şekilde Yenilendi.'
+  IslandError: '&eDostum Başkalarının Adasına Müdahale Edemezsin.'

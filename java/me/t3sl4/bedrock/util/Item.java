@@ -1,15 +1,21 @@
 package me.t3sl4.bedrock.util;
 
+import com.wasteofplastic.askyblock.ASkyBlockAPI;
+import me.t3sl4.bedrock.T3SL4Bedrock;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginManager;
 
 public class Item {
     public static ItemStack pickaxe;
     public static ItemMeta pickaxeMeta;
+    private static T3SL4Bedrock trock;
 
     public static void loadItem(Item item) {
         item.pickaxe = new ItemStack(Material.DIAMOND_PICKAXE);
@@ -66,5 +72,22 @@ public class Item {
         {
         }
         return isValidInteger;
+    }
+
+    public static boolean checkIsland(Player pl) {
+        if(checkASkyBlock()) {
+            if(ASkyBlockAPI.getInstance().playerIsOnIsland(pl)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean checkASkyBlock() {
+        Plugin p = Bukkit.getServer().getPluginManager().getPlugin("ASkyBlock");
+        if(p != null) {
+            return true;
+        }
+        return false;
     }
 }

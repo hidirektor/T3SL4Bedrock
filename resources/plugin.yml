@@ -3,6 +3,8 @@ version: 12.02.2021
 author: SYN_T3SL4
 main: me.t3sl4.bedrock.T3SL4Bedrock
 depend: [ProtocolLib]
+softdepend: [ASkyBlock]
+load: POSTWORLD
 
 commands:
   trock:

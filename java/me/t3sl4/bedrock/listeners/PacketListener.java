@@ -80,8 +80,17 @@ public class PacketListener extends PacketAdapter {
                             stopDigging(position, player);
                             return;
                         }
-                        if(MessageUtil.ENABLEWORLD && !MessageUtil.ENABLED_WORLDS.contains(player.getWorld().getName())) {
-                            player.sendMessage(MessageUtil.WORLDERROR);
+                        if(MessageUtil.ENABLEWORLD) {
+                            if(!Item.checkASkyBlock()) {
+                                if(!MessageUtil.ENABLED_WORLDS.contains(player.getWorld().getName())) {
+                                    player.sendMessage(MessageUtil.WORLDERROR);
+                                    return;
+                                }
+                            }
+                        }
+
+                        if(!Item.checkIsland(player)) {
+                            player.sendMessage(MessageUtil.ISLANDERROR);
                             return;
                         }
                         ItemStack inHand = player.getItemInHand();
@@ -90,10 +99,13 @@ public class PacketListener extends PacketAdapter {
                                 player.sendMessage(MessageUtil.DIGERROR);
                                 return;
                             }
-                        } else {
-                            if(!MessageUtil.ALLOWED.contains(inHand.getType())) {
-                                return;
-                            }
+                        }
+                        if(Item.checkPickaxe(inHand.getItemMeta())) {
+                            player.sendMessage(MessageUtil.PICKAXEERROR);
+                            return;
+                        }
+                        if(!MessageUtil.ALLOWED.contains(inHand.getType().toString())) {
+                            return;
                         }
                         ticks += 5;
                         int stage;

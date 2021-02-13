@@ -142,6 +142,7 @@ public class BedrockCommand implements CommandExecutor {
                         manager.reloadConfig();
                         MessageUtil.loadMessages();
                         manager.saveConfig();
+                        sender.sendMessage(MessageUtil.RELOAD);
                     } else {
                         sender.sendMessage(MessageUtil.PERMERROR);
                     }
@@ -149,6 +150,7 @@ public class BedrockCommand implements CommandExecutor {
                     manager.reloadConfig();
                     MessageUtil.loadMessages();
                     manager.saveConfig();
+                    sender.sendMessage(MessageUtil.RELOAD);
                 }
             }
         }

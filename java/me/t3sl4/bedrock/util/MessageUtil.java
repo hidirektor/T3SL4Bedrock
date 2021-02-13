@@ -29,6 +29,9 @@ public class MessageUtil {
     public static String GIVEN;
     public static String ARGDISTRIBUTEERROR;
     public static String SERVERGIVEN;
+    public static String PICKAXEERROR;
+    public static String RELOAD;
+    public static String ISLANDERROR;
 
     static SettingsManager manager = SettingsManager.getInstance();
 
@@ -58,6 +61,9 @@ public class MessageUtil {
         GIVEN = PREFIX + colorize(manager.getConfig().getString("Messages.Given"));
         ARGDISTRIBUTEERROR = PREFIX + colorize(manager.getConfig().getString("Messages.ArgDistributeError"));
         SERVERGIVEN = PREFIX + colorize(manager.getConfig().getString("Messages.ServerGiven"));
+        PICKAXEERROR = PREFIX + colorize(manager.getConfig().getString("Messages.PickaxeError"));
+        RELOAD = PREFIX + colorize(manager.getConfig().getString("Messages.Reload"));
+        ISLANDERROR = PREFIX + colorize(manager.getConfig().getString("Messages.IslandError"));
     }
 
     public static String colorize(String str) {
